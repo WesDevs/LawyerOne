@@ -6,7 +6,6 @@ import SearchForm from '../Forms/SearchForm';
 class TopNav extends React.Component {
 
     render() {
-        console.log(this.props);
         return (
             <div className="top-nav">
                 <img src="public/assets/logo.png" alt="Site Logo"/>
