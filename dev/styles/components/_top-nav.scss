@@ -1,0 +1,16 @@
+.top-nav {
+    display: flex;
+    align-items: center;
+
+    h2 {
+        margin: 0 8px;
+    }
+
+    .menu {
+        display: flex;
+        
+        li {
+            margin: 0 5px;
+        }
+    }
+}
