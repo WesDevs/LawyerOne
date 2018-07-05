@@ -1,12 +1,22 @@
 @import 'setup';
 @import 'utils';
 @import 'typography';
+@import 'components/header';
 @import 'components/top-nav';
 
+html {
+    font-size: 62.5%;
+}
+
 ul,
-li {
+li,
+p {
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
 
+a {
+    color: black;
+    text-decoration: none;
+}

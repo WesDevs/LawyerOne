@@ -1,0 +1,33 @@
+header {
+    background: url('../assets/tamarcus-brown-266128-unsplash1.jpg') no-repeat;
+    background-size: auto 100%;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+
+    .hero-text {
+        display: block;
+        width: 500px;
+        background: rgba(38, 12, 12, 0.25);
+        color: white;
+        position: absolute;
+        left: 15%;
+        top: 20%;
+        padding: 10px;
+
+        h1 {
+            font-size: 7rem;
+            margin: 15px 0;
+        }
+
+        h3 {
+            font-size: 4rem;
+            margin: 0 0 10px 0;
+        }
+
+        p {
+            font-style: italic;
+            font-size: 2rem;
+        }
+    }
+}

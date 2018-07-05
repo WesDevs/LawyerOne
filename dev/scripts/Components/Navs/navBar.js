@@ -4,7 +4,6 @@ import NavItems from './nav-items';
 class NavBar extends React.Component {
 
     render() {
-        console.log(this.props)
         return (
         <ul className="menu">
             {

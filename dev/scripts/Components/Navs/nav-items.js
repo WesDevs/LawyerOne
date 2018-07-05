@@ -1,10 +1,11 @@
 import React from 'react';
 
 const NavItems = (props) => {
-    console.log(props);
     return ( 
-        <li>
-            <p>{props.text}</p>
+        <li className = "nav-list-items">
+            <a href="#">
+                <p>{props.text}</p>
+            </a>
         </li>
     )
 }
