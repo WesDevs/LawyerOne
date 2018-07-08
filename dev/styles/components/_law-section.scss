@@ -1,0 +1,38 @@
+.laws-section {
+    background: rgb(248, 248, 230);
+    width: 100%;
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+
+        li {
+            width: 300px;
+
+            svg {
+                color: $blue;
+                font-size: 4rem;
+            }
+            
+            h3 {
+                font-size: 3rem;
+                font-family: $play;
+            }
+            
+            p {
+                font-size: 2rem;
+                font-family: $crim;
+                line-height: 20px;
+                color: #b1b1b1;
+                margin-bottom: 20px;
+            }
+
+            a {
+                font-size: 2rem;
+                font-family: $crim;
+                font-weight: 700;
+            }
+        }
+    }
+}

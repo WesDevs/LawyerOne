@@ -4,6 +4,8 @@ const MenuItem = (props) => {
     return ( 
         <li>
 
+            {props.icon !== '' ? <i className = {props.icon}></i> : ''}
+
             {props.h1 !== '' ? <h1>{props.h1}</h1> : ''}
 
             {props.h2 !== '' ? <h2>{props.h2}</h2> : ''}
