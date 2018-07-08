@@ -9,11 +9,12 @@ class LawSection extends React.Component {
             <section className = "laws-section">
                 <ul className = "wrapper">
                     {
-                        this.props.laws.map((laws) => {
+                        this.props.laws.map((laws, i) => {
                             return < MenuItem
                                 h3 = {laws.h3}
                                 p = {laws.p}
                                 icon = {laws.icon}
+                                key = {i}
                             />
                         })
                     }

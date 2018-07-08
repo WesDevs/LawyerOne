@@ -5,15 +5,15 @@ class Menu extends React.Component {
 
     constructor() {
         super();
-        this.x = 'Object.keys(this.props)[0]';
+        this.x = this.props
     }
 
     render() {
-        console.log(this.props)
+        console.log(this.x)
         return (
             <ul className = {this.props.statList.style}>
                 {
-                    this.props.statList.data.map((items) => {
+                    this.props.statList.data.map((items, i) => {
                         return <MenuItem 
                         icon = {items.icon}
                         h1 = {items.h1} 
@@ -22,7 +22,9 @@ class Menu extends React.Component {
                         h4 = {items.h4} 
                         h5 = {items.h5} 
                         h6 = {items.h6} 
-                        p = {items.p} /> 
+                        p = {items.p} 
+                        key = {i}/> 
+                        
                     })
                 }
             </ul>

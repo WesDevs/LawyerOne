@@ -7,8 +7,8 @@ class NavBar extends React.Component {
         return (
         <ul className="menu">
             {
-               this.props.menuItems.map((items) => {
-                   return <NavItems text = {items}/>
+               this.props.menuItems.map((items, i) => {
+                   return <NavItems text = {items} key = {i}/>
                })
             }
         </ul>
