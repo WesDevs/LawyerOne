@@ -1,0 +1,43 @@
+.practice-section {
+
+    div {
+        display: flex;
+    }
+
+    .practice-main {
+        width: calc(80% - 20px);
+        display: flex;
+        flex-direction: column;
+        text-align : center;
+        font-family: $crim;
+        
+        img {
+            height: auto;
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        h4 {
+            font-size: 2rem;
+            font-weight: 400;
+        }
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+
+            li {
+                width: 50%;
+                font-size: 1.6rem;
+            }
+        }
+    }
+    .practice-aside {
+        width: calc(20% - 20px);
+        display: flex;
+        flex-direction: column;
+        font-family: $crim;
+        font-size: 1.5rem; 
+        margin-right: 40px;
+    }
+}

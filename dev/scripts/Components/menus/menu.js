@@ -3,18 +3,14 @@ import MenuItem from './menu-items';
 
 class Menu extends React.Component {
 
-    constructor() {
-        super();
-        this.x = this.props
-    }
-
     render() {
-        console.log(this.x)
+        console.log(this.props)
         return (
-            <ul className = {this.props.statList.style}>
+            <ul className = {this.props.data.style}>
                 {
-                    this.props.statList.data.map((items, i) => {
+                    this.props.data.data.map((items, i) => {
                         return <MenuItem 
+                        image = {items.image}
                         icon = {items.icon}
                         h1 = {items.h1} 
                         h2 = {items.h2} 

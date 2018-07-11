@@ -1,0 +1,11 @@
+.image-gallery {
+    ul {
+        display: flex;
+        li {
+            width: 20%;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

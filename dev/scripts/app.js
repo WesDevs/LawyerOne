@@ -5,28 +5,13 @@ import HeroText from './Components/Header/HeroText';
 import Menu from './Components/menus/menu';
 import QuoteSection from './Components/QuoteSection/QuoteSection';
 import LawSection from './Components/LawsSection/LawSection';
+import ImageGallery from './Components/ImageGallerySection/ImageGallery';
+import PracticeSection from './Components/PracticesSection/PracticeSection';
 
 
 class App extends React.Component {
   constructor() {
     super();
-    this.statList = [{
-        h3: '900+',
-        p: 'Happy Clients',
-      },
-      {
-        h3: '95%',
-        p: 'Cases Success',
-      },
-      {
-        h3: '$250k+',
-        p: 'Recovered',
-      },
-      {
-        h3: '500+',
-        p: 'Cases Done',
-      },
-    ];
     this.state = {
       menuItems: ['home', 'pages', 'features', 'gallery', 'blog', 'contact'],
       socialMedias: ['fab fa-facebook-f', 'fab fa-twitter', 'fab fa-google-plus', 'fab fa-linkedin', 'fab fa-pinterest'],
@@ -50,8 +35,9 @@ class App extends React.Component {
         },
       ],
       style: 'banner-stats',
-    },
-    laws: [
+      },
+      laws: {
+      data: [
         {
           icon: 'fas fa-gavel',
           h3: 'Civil Law',
@@ -68,6 +54,73 @@ class App extends React.Component {
           p: 'Tempor invidunt ut labore dolore magna aliquyam.'
         },
       ]
+      },
+      imgGallery: {
+        data:[
+        {
+          image:'public/assets/photo-1e.jpg',
+        },
+        {
+          image:'public/assets/photo-2e.jpg',
+        },
+        {
+          image:'public/assets/photo-3e.jpg',
+        },
+        {
+          image:'public/assets/photo-4e.jpg',
+        },
+        {
+          image:'public/assets/photo-5e.jpg',
+        },
+        ]
+      },
+      PracticesAside: {
+        data: [
+          {
+            h3: 'Money Laundering'
+          },
+          {
+            h3: 'Sexual Offences'
+          },
+          {
+            h3: 'Insurance Services'
+          },
+          {
+            h3: 'Drug Offences'
+          },
+          {
+            h3: 'Drinking & Driving'
+          },
+          {
+            h3: 'Shoplifting'
+          },
+          {
+            h3: 'Fire Accident'
+          },
+        ]
+      },
+      PracticesMain: {
+        data: [
+          {
+            p: 'Ut wisi enim ad minim veniam',
+          },
+          {
+            p: 'Duis autem vel eum iriure dolor',
+          },
+          {
+            p: 'Quis nostrud exerci ton ullamcorper suscipit',
+          },
+          {
+            p: 'Hendrerit in vulputate velit esse molestie',
+          },
+          {
+            p: 'Lobortis nisl aliquip ex ea commodo',
+          },
+          {
+            p: 'Consequat vel illum dolore eu feugiat',
+          },
+        ]
+      }
     };
   }
 
@@ -80,10 +133,12 @@ class App extends React.Component {
           socialMedias = {this.state.socialMedias}
           />
           <HeroText />
-          <Menu statList = {this.state.statList} />
+          <Menu data = {this.state.statList} />
         </header>
         <QuoteSection />
-        <LawSection laws = {this.state.laws} />
+        <LawSection data = {this.state.laws} />
+        <ImageGallery data = {this.state.imgGallery}/>
+        <PracticeSection aside = {this.state.PracticesAside} main = {this.state.PracticesMain} />
       </main>
     )
   }
