@@ -19,6 +19,8 @@ class Menu extends React.Component {
                         h5 = {items.h5} 
                         h6 = {items.h6} 
                         p = {items.p} 
+                        a = {items.a}
+                        href = {items.href}
                         key = {i}/> 
                         
                     })

@@ -23,6 +23,9 @@ const MenuItem = (props) => {
 
             {props.p ? <p>{props.p}</p> : ''}
 
+            {props.a ? <a href={props.href}>{props.a}</a> : ''}
+
+
         </li>
     )
 }

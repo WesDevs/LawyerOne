@@ -1,0 +1,47 @@
+.process-section {
+    background: url(../assets/william-stitt-196804-unsplash.jpg) no-repeat;
+    background-position: fixed;
+    background-size: cover;
+    ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        li {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0 40px;
+
+            h2 {
+                font-size: 3.5rem;
+                color: gold;
+            }
+    
+            a, 
+            p {
+                font-size: 2rem;
+                color: white;
+            }
+
+            h2,
+            a,
+            p {
+                display: block;
+                font-family: $play;
+            }
+    
+            p {
+                margin-bottom: 20px;
+            }
+
+            a {
+                background: $blue;
+                border-radius: 5px;
+                padding: 10px 20px;
+                width: 170px;
+                text-align: center;
+            }
+        }
+    }
+}

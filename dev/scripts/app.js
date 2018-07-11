@@ -7,6 +7,8 @@ import QuoteSection from './Components/QuoteSection/QuoteSection';
 import LawSection from './Components/LawsSection/LawSection';
 import ImageGallery from './Components/ImageGallerySection/ImageGallery';
 import PracticeSection from './Components/PracticesSection/PracticeSection';
+import ProcessSection from './Components/ProcessSection/ProcessSection';
+import AboutSection from './Components/AboutSection/AboutSection';
 
 
 class App extends React.Component {
@@ -120,9 +122,75 @@ class App extends React.Component {
             p: 'Consequat vel illum dolore eu feugiat',
           },
         ]
-      }
+      },
+      Process: {
+        data: [
+          {
+            h2: 'Request Quote',
+            p: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+            a: 'Send Request',
+            href: '#'
+          },
+          {
+            h2: 'Case Investigation',
+            p: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+            a: 'Know More',
+            href: '#'
+          },
+          {
+            h2: 'Case Fight ',
+            p: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+            a: 'View Results',
+            href: '#'
+          }
+        ],
+      },
+      WhyUsList: [
+        {
+          title: 'Competitive Pricing', 
+          button: '-',
+          img: '',
+          text: 'Lorem ipsum dolor sit amet, cosectetur adipisicing elit.',
+          buttonId: 'text1Button',
+          textId: 'text1',
+        },
+        {
+          title: 'Quality Talent',
+          button: '+',
+          img: '',
+          text: 'Lorem ipsum dolor sit amet, cosectetur adipisicing elit.',
+          buttonId: 'text1Button',
+          textId: 'text1',
+        },
+        {
+          title: 'Proven Cases',
+          button: '+',
+          img: '',
+          text: 'Lorem ipsum dolor sit amet, cosectetur adipisicing elit.',
+          buttonId: 'text1Button',
+          textId: 'text1',
+        },
+        {
+          title: 'Awards',
+          button: '+',
+          img: '',
+          text: 'Lorem ipsum dolor sit amet, cosectetur adipisicing elit.',
+          buttonId: 'text1Button',
+          textId: 'text1',
+        },
+        {
+          title: 'Experienced',
+          button: '+',
+          img: '',
+          text: 'Lorem ipsum dolor sit amet, cosectetur adipisicing elit.',
+          buttonId: 'text1Button',
+          textId: 'text1',
+        },
+      ]
     };
   }
+
+
 
   render() {
     return (
@@ -139,6 +207,8 @@ class App extends React.Component {
         <LawSection data = {this.state.laws} />
         <ImageGallery data = {this.state.imgGallery}/>
         <PracticeSection aside = {this.state.PracticesAside} main = {this.state.PracticesMain} />
+        <ProcessSection data = {this.state.Process}/>
+        <AboutSection whyus = {this.state.WhyUsList}/>
       </main>
     )
   }
