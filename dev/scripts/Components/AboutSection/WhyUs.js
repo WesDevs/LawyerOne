@@ -3,20 +3,21 @@ import React from 'react';
 class WhyUs extends React.Component {
 
     render() {
-        console.log(this.props.data)
+        // console.log(this.props)
         return (
-            <div className = "whyus">
+            < div className = "whyus-section" >
                 <h1>Why Us</h1>
                 <ul>
 
                     {
                         this.props.data.map((items, i) => {
-                            return <li key={i}>
-                                <div>
+                            // console.log(items, i);
+                            return <li key={i} >
+                                <div className = 'secondary-title'>
                                     <h6>{items.title}</h6>
-                                    <button>{items.button}</button>
+                                    <button id = {items.buttonId} className = "whyus-buttons" onClick = {this.props.onClick} data-key = {i}>{items.button}</button>
                                 </div>
-                                <div>
+                                <div id = {items.textId} className = {items.appear} >
                                     <img src={items.img} alt=""/>
                                     <p>{items.text}</p>
                                 </div>

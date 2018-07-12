@@ -1,0 +1,43 @@
+
+.whyus-section {
+    width: 30%;
+
+    .secondary-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 40px;
+        color: white;
+        background: $blue;
+        font-family: $play;
+
+        h6 {
+            font-size: 1.4rem;
+            margin: 0;
+        }
+
+        button {
+            background: $blue;
+            border: none;
+            height: 100%;
+            width: 40px;
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+    }
+
+    div:nth-child(2) {
+        font-size: 1.2rem;
+        font-family: $crim;
+        font-weight: bold;
+    }
+}
+
+.show {
+    display: flex;
+}
+
+.hide {
+    display: none;
+}

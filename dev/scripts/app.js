@@ -149,10 +149,11 @@ class App extends React.Component {
         {
           title: 'Competitive Pricing', 
           button: '-',
-          img: '',
+          img: 'public/assets/photo-1496389395181-e5fdd5c0315e.jpg',
           text: 'Lorem ipsum dolor sit amet, cosectetur adipisicing elit.',
           buttonId: 'text1Button',
-          textId: 'text1',
+          textId: 'text0',
+          appear: 'show'
         },
         {
           title: 'Quality Talent',
@@ -161,6 +162,7 @@ class App extends React.Component {
           text: 'Lorem ipsum dolor sit amet, cosectetur adipisicing elit.',
           buttonId: 'text1Button',
           textId: 'text1',
+          appear: 'hide'
         },
         {
           title: 'Proven Cases',
@@ -168,7 +170,8 @@ class App extends React.Component {
           img: '',
           text: 'Lorem ipsum dolor sit amet, cosectetur adipisicing elit.',
           buttonId: 'text1Button',
-          textId: 'text1',
+          textId: 'text2',
+          appear: 'hide'
         },
         {
           title: 'Awards',
@@ -176,7 +179,8 @@ class App extends React.Component {
           img: '',
           text: 'Lorem ipsum dolor sit amet, cosectetur adipisicing elit.',
           buttonId: 'text1Button',
-          textId: 'text1',
+          textId: 'text3',
+          appear: 'hide'
         },
         {
           title: 'Experienced',
@@ -184,13 +188,31 @@ class App extends React.Component {
           img: '',
           text: 'Lorem ipsum dolor sit amet, cosectetur adipisicing elit.',
           buttonId: 'text1Button',
-          textId: 'text1',
+          textId: 'text4',
+          appear: 'hide'
         },
       ]
     };
+
+    this.onClick = this.onClick.bind(this);
   }
 
-
+  onClick(e) {
+    let key = e.target.attributes[2].value;
+    const text = document.getElementById(`text${key}`);
+    const allText = document.querySelectorAll('.whyus-texts');
+    console.log(allText);
+    if (e.target.innerHTML == '-') {
+      e.target.innerHTML = '+',
+      text.classList.remove('show'),
+      text.classList.add('hide')
+    } else {
+      e.target.innerHTML = '-',
+      text.classList.remove('hide'),
+      text.classList.add('show')
+    }
+    console.log(text);
+  }
 
   render() {
     return (
@@ -208,7 +230,7 @@ class App extends React.Component {
         <ImageGallery data = {this.state.imgGallery}/>
         <PracticeSection aside = {this.state.PracticesAside} main = {this.state.PracticesMain} />
         <ProcessSection data = {this.state.Process}/>
-        <AboutSection whyus = {this.state.WhyUsList}/>
+        <AboutSection whyus = {this.state.WhyUsList} onClick = {this.onClick}/>
       </main>
     )
   }
