@@ -4,7 +4,7 @@ const MenuItem = (props) => {
     return ( 
         <li id = {props.listId} className = {props.listClass}> 
 
-            {props.button ? <button id={props.buttonId}>{props.button}</button> : ''}
+            {props.button ? <button id={props.buttonId} onClick = {props.onClick}>{props.button}</button> : ''}
 
             {props.image ? < img src = {props.image}/> : ''}
 

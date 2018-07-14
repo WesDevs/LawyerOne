@@ -11,9 +11,18 @@ class AboutSection extends React.Component {
         return (
             <section className = "about-section">
                 <div className = "wrapper">
-                    <WhyUs data = {this.props.whyus} onClick = {this.props.onClick}/>
-                    <Services data = {this.props.services}/>
-                    <Advantages data1 = {this.props.advantages.headings} data2 = {this.props.advantages.content}/>
+                    <WhyUs 
+                    data = {this.props.whyus} 
+                    onClick = {this.props.onClick}
+                    />
+                    <Services 
+                    data = {this.props.services}
+                    />
+                    <Advantages 
+                    data1 = {this.props.advantages.headings} 
+                    data2 = {this.props.advantages.content}
+                    onClick = {this.props.advantagesOnClick}
+                    />
                 </div>
             </section>
         )

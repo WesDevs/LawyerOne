@@ -1,7 +1,7 @@
 
 
 .about-section {
-
+    width: 100%;
     .wrapper {
         display: flex;
         justify-content: space-between;
@@ -79,9 +79,10 @@
 .advantages-section {
     ul {
         display: flex;
-        li {
+        .list-content {
+            flex-direction: column;
             img {
-                width: 400px;
+                width: 300px;
             }
         }
     }

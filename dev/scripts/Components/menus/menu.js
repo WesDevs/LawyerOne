@@ -4,7 +4,6 @@ import MenuItem from './menu-items';
 class Menu extends React.Component {
 
     render() {
-        console.log(this.props)
         return (
             <ul className = {this.props.data.style}>
                 {
@@ -26,6 +25,7 @@ class Menu extends React.Component {
                         buttonId = {items.buttonId}
                         listId = {items.listId}
                         listClass = {items.listClass}
+                        onClick = {this.props.onClick}
                         /> 
                     })
                 }

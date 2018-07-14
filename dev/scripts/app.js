@@ -160,7 +160,7 @@ class App extends React.Component {
           button: '+',
           img: 'public/assets/photo-1496389395181-e5fdd5c0315e.jpg',
           text: 'Lorem ipsum dolor sit amet, cosectetur adipisicing elit.',
-          buttonId: 'text1Button',
+          buttonId: 'text2Button',
           textId: 'text1',
           appear: 'hide'
         },
@@ -169,7 +169,7 @@ class App extends React.Component {
           button: '+',
           img: 'public/assets/photo-1496389395181-e5fdd5c0315e.jpg',
           text: 'Lorem ipsum dolor sit amet, cosectetur adipisicing elit.',
-          buttonId: 'text1Button',
+          buttonId: 'text3Button',
           textId: 'text2',
           appear: 'hide'
         },
@@ -178,7 +178,7 @@ class App extends React.Component {
           button: '+',
           img: 'public/assets/photo-1496389395181-e5fdd5c0315e.jpg',
           text: 'Lorem ipsum dolor sit amet, cosectetur adipisicing elit.',
-          buttonId: 'text1Button',
+          buttonId: 'text4Button',
           textId: 'text3',
           appear: 'hide'
         },
@@ -187,7 +187,7 @@ class App extends React.Component {
           button: '+',
           img: 'public/assets/photo-1496389395181-e5fdd5c0315e.jpg',
           text: 'Lorem ipsum dolor sit amet, cosectetur adipisicing elit.',
-          buttonId: 'text1Button',
+          buttonId: 'text5Button',
           textId: 'text4',
           appear: 'hide'
         },
@@ -238,13 +238,13 @@ class App extends React.Component {
               image: 'public/assets/photo-4e.jpg',
               p: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio fuga maxime tempore, consequuntur quis eligendi, assumenda nemo, porro iure er.s.',
               listId: 'item2',
-              listClass: 'list-content'
+              listClass: 'list-content hide'
             },
             {
               image: 'public/assets/photo-5e.jpg',
               p: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, tenetur voluptatem ad minus maiores voluptatibus aliquam voluptas distinctio rem.',
               listId: 'item3',
-              listClass: 'list-content'
+              listClass: 'list-content hide'
             },
           ]
         }
@@ -252,18 +252,36 @@ class App extends React.Component {
     };
 
     this.whyUsOnClick = this.whyUsOnClick.bind(this);
+    this.advantagesOnClick = this.advantagesOnClick.bind(this);
   }
 
   whyUsOnClick(e) {
     let key = e.target.attributes[2].value;
     const text = document.getElementById(`text${key}`);
-    const allText = document.querySelectorAll('.whyus-texts');
-    console.log(allText);
+    const textArray = [];
+    const buttonArray = [];
+    this.state.WhyUsList.map((items) => {
+      textArray.push(items.textId),
+      buttonArray.push(items.buttonId)
+    })
+
     if (e.target.innerHTML == '-') {
-      e.target.innerHTML = '+',
+      textArray.map((items) => {
+        document.getElementById(`${items}`).classList.add('hide');
+      })
+
+      buttonArray.map((items) => {
+        document.getElementById(`${items}`).innerHTML = '+'
+      })
       text.classList.remove('show'),
       text.classList.add('hide')
     } else {
+      textArray.map((items) => {
+        document.getElementById(`${items}`).classList.add('hide');
+      })
+      buttonArray.map((items) => {
+        document.getElementById(`${items}`).innerHTML = '+'
+      })
       e.target.innerHTML = '-',
       text.classList.remove('hide'),
       text.classList.add('show')
@@ -271,7 +289,25 @@ class App extends React.Component {
   }
 
   advantagesOnClick(e) {
-
+    const advOne = document.getElementById('item1');
+    const advTwo = document.getElementById('item2');
+    const advThree = document.getElementById('item3');
+    if (e.target.id == 'listButton1') {
+      advTwo.classList.add('hide');
+      advThree.classList.add('hide');
+      advOne.classList.remove('hide');
+      advOne.classList.add('show');
+    } else if (e.target.id == 'listButton2') {
+      advThree.classList.add('hide');
+      advOne.classList.add('hide');
+      advTwo.classList.remove('hide');
+      advTwo.classList.add('show');
+    } else if (e.target.id == 'listButton3') {
+      advOne.classList.add('hide');
+      advTwo.classList.add('hide');
+      advThree.classList.remove('hide');
+      advThree.classList.add('show');
+    }
   }
 
   render() {
@@ -290,7 +326,7 @@ class App extends React.Component {
         <ImageGallery data = {this.state.imgGallery}/>
         <PracticeSection aside = {this.state.PracticesAside} main = {this.state.PracticesMain} />
         <ProcessSection data = {this.state.Process}/>
-        <AboutSection whyus = {this.state.WhyUsList} onClick = {this.whyUsOnClick} services = {this.state.Services} advantages = {this.state.Advantages}/>
+        <AboutSection whyus = {this.state.WhyUsList} onClick = {this.whyUsOnClick} services = {this.state.Services} advantages = {this.state.Advantages} advantagesOnClick = {this.advantagesOnClick}/>
       </main>
     )
   }

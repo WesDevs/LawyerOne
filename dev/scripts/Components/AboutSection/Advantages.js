@@ -8,7 +8,10 @@ class Advantages extends React.Component {
             <div className = "advantages-section">
                 <h1>Advantages</h1>
                 <div className = "advantages-content">
-                    <Menu data = {this.props.data1}/>
+                    <Menu 
+                    data = {this.props.data1}
+                    onClick = {this.props.onClick}
+                    />
                     <Menu data = {this.props.data2}/>
                 </div>
             </div>
