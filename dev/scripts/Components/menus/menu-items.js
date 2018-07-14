@@ -1,9 +1,10 @@
 import React from 'react';
 
 const MenuItem = (props) => {
-    console.log(props.hasOwnProperty('image'))
     return ( 
-        <li>
+        <li id = {props.listId} className = {props.listClass}> 
+
+            {props.button ? <button id={props.buttonId}>{props.button}</button> : ''}
 
             {props.image ? < img src = {props.image}/> : ''}
 
@@ -24,7 +25,7 @@ const MenuItem = (props) => {
             {props.p ? <p>{props.p}</p> : ''}
 
             {props.a ? <a href={props.href}>{props.a}</a> : ''}
-
+            
 
         </li>
     )

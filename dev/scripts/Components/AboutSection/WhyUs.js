@@ -3,7 +3,6 @@ import React from 'react';
 class WhyUs extends React.Component {
 
     render() {
-        // console.log(this.props)
         return (
             < div className = "whyus-section" >
                 <h1>Why Us</h1>
@@ -11,7 +10,6 @@ class WhyUs extends React.Component {
 
                     {
                         this.props.data.map((items, i) => {
-                            // console.log(items, i);
                             return <li key={i} >
                                 <div className = 'secondary-title'>
                                     <h6>{items.title}</h6>

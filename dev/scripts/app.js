@@ -158,7 +158,7 @@ class App extends React.Component {
         {
           title: 'Quality Talent',
           button: '+',
-          img: '',
+          img: 'public/assets/photo-1496389395181-e5fdd5c0315e.jpg',
           text: 'Lorem ipsum dolor sit amet, cosectetur adipisicing elit.',
           buttonId: 'text1Button',
           textId: 'text1',
@@ -167,7 +167,7 @@ class App extends React.Component {
         {
           title: 'Proven Cases',
           button: '+',
-          img: '',
+          img: 'public/assets/photo-1496389395181-e5fdd5c0315e.jpg',
           text: 'Lorem ipsum dolor sit amet, cosectetur adipisicing elit.',
           buttonId: 'text1Button',
           textId: 'text2',
@@ -176,7 +176,7 @@ class App extends React.Component {
         {
           title: 'Awards',
           button: '+',
-          img: '',
+          img: 'public/assets/photo-1496389395181-e5fdd5c0315e.jpg',
           text: 'Lorem ipsum dolor sit amet, cosectetur adipisicing elit.',
           buttonId: 'text1Button',
           textId: 'text3',
@@ -185,19 +185,76 @@ class App extends React.Component {
         {
           title: 'Experienced',
           button: '+',
-          img: '',
+          img: 'public/assets/photo-1496389395181-e5fdd5c0315e.jpg',
           text: 'Lorem ipsum dolor sit amet, cosectetur adipisicing elit.',
           buttonId: 'text1Button',
           textId: 'text4',
           appear: 'hide'
         },
-      ]
+      ],
+      Services: {
+        data: [
+        {
+          p: 'At vero eos et accusam',
+        },
+        {
+          p: 'Stet clita kasd gubergren no sea',
+        },
+        {
+          p: 'Takimata sanctus',
+        },
+        {
+          p: 'Lorem ipsum dolor sit amet',
+        },
+        {
+          p: 'Consetetur sadipscing',
+        },
+        ]
+      },
+      Advantages: {
+        headings:{
+          data: [{
+              button: 'Quality',
+              buttonId: 'listButton1'
+            },
+            {
+              button: 'Services',
+              buttonId: 'listButton2'
+            },
+            {
+              button: 'Results',
+              buttonId: 'listButton3'
+            }
+          ]
+        },
+        content: {
+          data: [{
+              image: 'public/assets/photo-3e.jpg',
+              p: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, at delectus eius placeat veritatis mollitia in aperiam fugiat quae! Provide.',
+              listId: 'item1',
+              listClass: 'list-content'
+            },
+            {
+              image: 'public/assets/photo-4e.jpg',
+              p: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio fuga maxime tempore, consequuntur quis eligendi, assumenda nemo, porro iure er.s.',
+              listId: 'item2',
+              listClass: 'list-content'
+            },
+            {
+              image: 'public/assets/photo-5e.jpg',
+              p: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, tenetur voluptatem ad minus maiores voluptatibus aliquam voluptas distinctio rem.',
+              listId: 'item3',
+              listClass: 'list-content'
+            },
+          ]
+        }
+      }
     };
 
-    this.onClick = this.onClick.bind(this);
+    this.whyUsOnClick = this.whyUsOnClick.bind(this);
   }
 
-  onClick(e) {
+  whyUsOnClick(e) {
     let key = e.target.attributes[2].value;
     const text = document.getElementById(`text${key}`);
     const allText = document.querySelectorAll('.whyus-texts');
@@ -211,7 +268,10 @@ class App extends React.Component {
       text.classList.remove('hide'),
       text.classList.add('show')
     }
-    console.log(text);
+  }
+
+  advantagesOnClick(e) {
+
   }
 
   render() {
@@ -230,7 +290,7 @@ class App extends React.Component {
         <ImageGallery data = {this.state.imgGallery}/>
         <PracticeSection aside = {this.state.PracticesAside} main = {this.state.PracticesMain} />
         <ProcessSection data = {this.state.Process}/>
-        <AboutSection whyus = {this.state.WhyUsList} onClick = {this.onClick}/>
+        <AboutSection whyus = {this.state.WhyUsList} onClick = {this.whyUsOnClick} services = {this.state.Services} advantages = {this.state.Advantages}/>
       </main>
     )
   }

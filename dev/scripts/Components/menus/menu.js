@@ -21,8 +21,12 @@ class Menu extends React.Component {
                         p = {items.p} 
                         a = {items.a}
                         href = {items.href}
-                        key = {i}/> 
-                        
+                        key = {i}
+                        button = {items.button}
+                        buttonId = {items.buttonId}
+                        listId = {items.listId}
+                        listClass = {items.listClass}
+                        /> 
                     })
                 }
             </ul>

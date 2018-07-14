@@ -1,7 +1,7 @@
 import React from 'react';
 import WhyUs from './WhyUs';
-// import Services from './Services';
-// import Advantages from './Advantages';
+import Services from './Services';
+import Advantages from './Advantages';
 
 
 
@@ -12,6 +12,8 @@ class AboutSection extends React.Component {
             <section className = "about-section">
                 <div className = "wrapper">
                     <WhyUs data = {this.props.whyus} onClick = {this.props.onClick}/>
+                    <Services data = {this.props.services}/>
+                    <Advantages data1 = {this.props.advantages.headings} data2 = {this.props.advantages.content}/>
                 </div>
             </section>
         )
