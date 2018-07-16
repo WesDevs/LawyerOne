@@ -1,7 +1,7 @@
 
-
 .about-section {
     width: 100%;
+    margin: 40px 0;
     .wrapper {
         display: flex;
         justify-content: space-between;
@@ -18,7 +18,7 @@
     h1 {
         font-weight: bold;
         font-size: 4rem;
-        margin-bottom: 40px;
+        margin: 20px 0 40px 0;
     }
 }
 
@@ -77,12 +77,42 @@
 }
 
 .advantages-section {
+    .advantages-content {
+        border: 1px solid rgb(238, 236, 236);
+    }
     ul {
         display: flex;
+        .advantage-buttons {
+            margin: 0 auto;
+            flex: 1 1 auto;
+            border-right: 1px solid rgb(182, 182, 182);
+
+            &:last-child {
+                border-right: none;
+            }
+            :hover {
+                background-color: gold;
+                color: $blue;
+            }
+
+            button {
+                width: 100%;
+                padding: 10px 20px;
+                font-family: $play;
+                font-size: 1.6rem;
+                background: $blue;
+                color: white;
+                border : none;
+
+            }
+        }
         .list-content {
             flex-direction: column;
             img {
-                width: 300px;
+                width: 100%;
+            }
+            p {
+                padding: 10px;
             }
         }
     }

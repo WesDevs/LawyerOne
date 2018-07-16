@@ -1,8 +1,8 @@
 header {
     background: url('../assets/tamarcus-brown-266128-unsplash1.jpg') no-repeat;
     background-size: 100% auto;
-    background-position: center;
-    height: 100vh;
+    background-position: 50% 20%;
+    height: calc(100vh - 60px);
     position: relative;
 
     .hero-text {

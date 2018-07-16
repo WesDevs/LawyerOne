@@ -9,6 +9,8 @@ import ImageGallery from './Components/ImageGallerySection/ImageGallery';
 import PracticeSection from './Components/PracticesSection/PracticeSection';
 import ProcessSection from './Components/ProcessSection/ProcessSection';
 import AboutSection from './Components/AboutSection/AboutSection';
+import AttorneysSection from './Components/AttorneysSection/AttorneysSection';
+import ConsultationSection from './Components/ConsultationSection/ConsultationSection';
 
 
 class App extends React.Component {
@@ -16,7 +18,28 @@ class App extends React.Component {
     super();
     this.state = {
       menuItems: ['home', 'pages', 'features', 'gallery', 'blog', 'contact'],
-      socialMedias: ['fab fa-facebook-f', 'fab fa-twitter', 'fab fa-google-plus', 'fab fa-linkedin', 'fab fa-pinterest'],
+      socialMedias: [
+        {
+          icon:'fab fa-facebook-f',
+          url: '#',
+        }, 
+        {
+          icon:'fab fa-twitter',
+          url: '#',
+        },
+        {  
+          icon:'fab fa-google-plus',
+          url: '#',
+        }, 
+        {
+          icon:'fab fa-linkedin',
+          url: '#'
+        },
+        { 
+          icon:'fab fa-pinterest',
+          url:'#'
+        }
+      ],
       statList: {
         data : [
         {
@@ -215,15 +238,19 @@ class App extends React.Component {
         headings:{
           data: [{
               button: 'Quality',
-              buttonId: 'listButton1'
+              buttonId: 'listButton1',
+              listClass: 'advantage-buttons'
             },
             {
               button: 'Services',
-              buttonId: 'listButton2'
+              buttonId: 'listButton2',
+              listClass: 'advantage-buttons'
             },
             {
               button: 'Results',
-              buttonId: 'listButton3'
+              buttonId: 'listButton3',
+              listClass: 'advantage-buttons'
+
             }
           ]
         },
@@ -248,6 +275,92 @@ class App extends React.Component {
             },
           ]
         }
+      },
+      Attorneys: {
+        title: 'Our Attorneys',
+        h3: 'Meet Our Talented Team',
+        data: [
+          {
+            image: 'public/assets/lawyer1.jpg',
+            h5: 'Bobbi Bobberton',
+            p: 'Civil Law',
+            
+            socials: [
+            {
+              url: '#',
+              icon:'fab fa-facebook-f',
+            } ,
+            {
+              url: '#',
+              icon:'fab fa-twitter',
+            },
+            {
+              url: '#',
+              icon: 'fab fa-google-plus',
+            }
+          ]
+          },
+          {
+            image: 'public/assets/lawyer2.jpg',
+            h5: 'Bobbi Bobberton',
+            p: 'Criminal Law',
+            
+            socials: [
+            {
+              url: '#',
+              icon:'fab fa-facebook-f',
+            },
+            {
+              url: '#',
+              icon:'fab fa-twitter',
+            },
+            {
+              url: '#',
+              icon: 'fab fa-google-plus',
+            }
+          ]
+          },
+          {
+            image: 'public/assets/lawyer3.jpg',
+            h5: 'Bobbi Bobberton',
+            p: 'Business Law',
+            
+            socials: [
+            {
+              url: '#',
+              icon:'fab fa-facebook-f',
+            },
+            {
+              url: '#',
+              icon:'fab fa-twitter',
+            },
+            {
+              url: '#',
+              icon: 'fab fa-google-plus',
+            }
+          ]
+          },
+          {
+            image: 'public/assets/lawyer4.jpg',
+            h5: 'Bobbi Bobberton',
+            p: 'Civil Law',
+            
+            socials: [
+            {
+              url: '',
+              icon:'fab fa-facebook-f',
+            },
+            {
+              url: '',
+              icon:'fab fa-twitter',
+            },
+            {
+              url: '',
+              icon: 'fab fa-google-plus',
+            }
+          ]
+          },
+        ],
       }
     };
 
@@ -273,8 +386,7 @@ class App extends React.Component {
       buttonArray.map((items) => {
         document.getElementById(`${items}`).innerHTML = '+'
       })
-      text.classList.remove('show'),
-      text.classList.add('hide')
+      text.classList.remove('show')
     } else {
       textArray.map((items) => {
         document.getElementById(`${items}`).classList.add('hide');
@@ -313,11 +425,11 @@ class App extends React.Component {
   render() {
     return (
       <main>
-        <header>
-          <TopNav 
+        <TopNav 
           menuItems = {this.state.menuItems}
           socialMedias = {this.state.socialMedias}
-          />
+        />
+        <header>
           <HeroText />
           <Menu data = {this.state.statList} />
         </header>
@@ -327,6 +439,8 @@ class App extends React.Component {
         <PracticeSection aside = {this.state.PracticesAside} main = {this.state.PracticesMain} />
         <ProcessSection data = {this.state.Process}/>
         <AboutSection whyus = {this.state.WhyUsList} onClick = {this.whyUsOnClick} services = {this.state.Services} advantages = {this.state.Advantages} advantagesOnClick = {this.advantagesOnClick}/>
+        <AttorneysSection data = {this.state.Attorneys}/>
+        <ConsultationSection />
       </main>
     )
   }

@@ -1,4 +1,5 @@
 import React from 'react';
+import SocialNav from '../Navs/socialMediaNav';
 
 const MenuItem = (props) => {
     return ( 
@@ -25,6 +26,8 @@ const MenuItem = (props) => {
             {props.p ? <p>{props.p}</p> : ''}
 
             {props.a ? <a href={props.href}>{props.a}</a> : ''}
+
+            {props.socials ? <SocialNav socialMedias = {props.socials} /> : ''}
             
 
         </li>

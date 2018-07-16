@@ -7,7 +7,7 @@ class SocialNav extends React.Component {
         <ul className="social-nav-list">
             {
                 this.props.socialMedias.map((social, i) => {
-                    return <li key = {i} ><a href="#"><i className = {social}></i></a></li>
+                    return <li key = {i} ><a href={social.url}><i className = {social.icon}></i></a></li>
                 })
             }
         </ul>

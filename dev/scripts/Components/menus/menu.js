@@ -4,10 +4,12 @@ import MenuItem from './menu-items';
 class Menu extends React.Component {
 
     render() {
+        console.log(this.props);
         return (
             <ul className = {this.props.data.style}>
                 {
                     this.props.data.data.map((items, i) => {
+                        console.log(items.socials)
                         return <MenuItem 
                         image = {items.image}
                         icon = {items.icon}
@@ -25,6 +27,7 @@ class Menu extends React.Component {
                         buttonId = {items.buttonId}
                         listId = {items.listId}
                         listClass = {items.listClass}
+                        socials = {items.socials}
                         onClick = {this.props.onClick}
                         /> 
                     })
