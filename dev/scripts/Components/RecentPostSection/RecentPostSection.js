@@ -1,5 +1,6 @@
 import React from 'react';
 import Posts from './Posts'
+import Menu from '../menus/menu'
 
 class RecentPostSection extends React.Component {
 
@@ -22,12 +23,19 @@ class RecentPostSection extends React.Component {
                                     name = {post.name}
                                     title = {post.title}
                                     key = {i}
+                                    postSrc = {post.postSrc}
+                                    likes = {post.likes}
+                                    url = {post.url}
                                 />
                             })
                         }
                     </ul>
+                    <a href = "#" className ="blog-link">Blog Page</a>
+
+                    <Menu data = {this.props.sponsorList}/>
+
                 </div>
-            </section>
+           </section>
         )
     }
 }

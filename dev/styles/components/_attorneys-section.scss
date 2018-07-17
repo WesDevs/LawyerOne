@@ -1,5 +1,6 @@
 .attorneys-section {
     background: rgba(244, 230, 193, 0.43);
+    padding: 40px 0;
     div {
         display: flex;
         flex-direction: column;
@@ -50,14 +51,13 @@
                     padding-bottom: 15px;
                     li {
                         a {
-                            font-size: 1.5rem;
+                            font-size: 2rem;
                             padding: 15px;
                         }
                         :hover svg {
-                            color: $blue;
+                            color: gold;
                         }
                     }
-
                 }
             }
         }

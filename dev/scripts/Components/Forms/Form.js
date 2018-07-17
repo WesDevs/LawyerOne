@@ -31,7 +31,7 @@ class Form extends React.Component {
                     this.props.subject ? 
                     <div>
                         <label htmlFor="subjectInput" className="visuallyhidden"></label>
-                        <input type="text" id="subjectInput" required/>
+                        <input type="text" id="subjectInput" required placeholder = "Subject"/>
                     </div> : ''
                 }
                 {

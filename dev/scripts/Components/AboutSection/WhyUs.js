@@ -10,7 +10,7 @@ class WhyUs extends React.Component {
 
                     {
                         this.props.data.map((items, i) => {
-                            return <li key={i} >
+                            return <li key={i}>
                                 <div className = 'secondary-title'>
                                     <h6>{items.title}</h6>
                                     <button id = {items.buttonId} className = "whyus-buttons" onClick = {this.props.onClick} data-key = {i}>{items.button}</button>

@@ -12,6 +12,8 @@ import AboutSection from './Components/AboutSection/AboutSection';
 import AttorneysSection from './Components/AttorneysSection/AttorneysSection';
 import ConsultationSection from './Components/ConsultationSection/ConsultationSection';
 import RecentPostSection from './Components/RecentPostSection/RecentPostSection';
+import ContactSection from './Components/ContactSection/ContactSection';
+import WriteUsSection from './Components/WriteUsSection/WriteUsSection';
 
 
 class App extends React.Component {
@@ -43,43 +45,43 @@ class App extends React.Component {
       ],
       statList: {
         data : [
-        {
-          h3: '900+',
-          p: 'Happy Clients',
-        },
-        {
-          h3: '95%',
-          p: 'Cases Success',
-        },
-        {
-          h3: '$250k+',
-          p: 'Recovered',
-        },
-        {
-          h3: '500+',
-          p: 'Cases Done',
-        },
-      ],
-      style: 'banner-stats',
+          {
+            h3: '900+',
+            p: 'Happy Clients',
+          },
+          {
+            h3: '95%',
+            p: 'Cases Success',
+          },
+          {
+            h3: '$250k+',
+            p: 'Recovered',
+          },
+          {
+            h3: '500+',
+            p: 'Cases Done',
+          },
+        ],
+        style: 'banner-stats',
       },
       laws: {
-      data: [
-        {
-          icon: 'fas fa-gavel',
-          h3: 'Civil Law',
-          p: 'Tempor invidunt ut labore dolore magna aliquyam.'
-        },
-        {
-          icon: 'fas fa-balance-scale',
-          h3: 'Criminal Law',
-          p: 'Tempor invidunt ut labore dolore magna aliquyam.'
-        },
-        {
-          icon: 'fas fa-suitcase',
-          h3: 'Business Law',
-          p: 'Tempor invidunt ut labore dolore magna aliquyam.'
-        },
-      ]
+        data: [
+          {
+            icon: 'fas fa-gavel',
+            h3: 'Civil Law',
+            p: 'Tempor invidunt ut labore dolore magna aliquyam.'
+          },
+          {
+            icon: 'fas fa-balance-scale',
+            h3: 'Criminal Law',
+            p: 'Tempor invidunt ut labore dolore magna aliquyam.'
+          },
+          {
+            icon: 'fas fa-suitcase',
+            h3: 'Business Law',
+            p: 'Tempor invidunt ut labore dolore magna aliquyam.'
+          },
+        ]
       },
       imgGallery: {
         data:[
@@ -368,21 +370,75 @@ class App extends React.Component {
         email: true,
         phone: true,
         text: true,
+        titleColored: 'Get ',
+        title: 'Free Consultation!'
       },
       posts: [
         {
           src: 'public/assets/lawyer1.jpg',
           date: "January 06'15",
           name: 'Jen Anderson',
-          title: 'Ut wisi enim ad minim veniam'
+          title: 'Ut wisi enim ad minim veniam',
+          postSrc: 'public/assets/photo-1e.jpg',
+          likes: '8',
+          url: '#'
         },
         {
           src: 'public/assets/lawyer2.jpg',
           date: "January 06'15",
           name: 'Jun Anderson',
-          title: 'Ut wisi enim ad minim veniam'
+          title: 'Ut wisi enim ad minim veniam',
+          postSrc: 'public/assets/photo-3e.jpg',
+          likes: '16',
+          url: '#'
         },
-      ]
+      ],
+      sponsorList: {
+          data: [
+            {
+              image: 'public/assets/5887c551bc2fc2ef3a18604e.png',
+            },
+            {
+              image: 'public/assets/image_gallery.png',
+            },
+            {
+              image: 'public/assets/NASA-Logo-002.png',
+            },
+            {
+              image: 'public/assets/logo-red-bull.png',
+            },
+            {
+              image: 'public/assets/tropicana-new-logo.png',
+            },
+          ],
+          style: 'sponsor-list'
+      },
+      contact: {
+        data: [
+          {
+            image: 'public/assets/phone.png',
+            h6: 'Phone: 9 (800) 695-2686',
+            p: 'Fax: 8 (800) 659-2684'
+          },
+          {
+            image: 'public/assets/mapmarker.png',
+            p: 'PO Box 97845 Baker st. 567, Los Angeles, California, United States'
+          },
+          {
+            image: 'public/assets/mailme.png',
+            p: 'Email:justice@support.com'
+          }
+        ]
+      },
+      writeUs: {
+        fullName: true,
+        email: true,
+        phone: true,
+        text: true,
+        subject: true,
+        title: 'Write to Us',
+        subheading: 'Contact Us via Contact Form'
+      },
     };
 
     this.whyUsOnClick = this.whyUsOnClick.bind(this);
@@ -403,7 +459,6 @@ class App extends React.Component {
       textArray.map((items) => {
         document.getElementById(`${items}`).classList.add('hide');
       })
-
       buttonArray.map((items) => {
         document.getElementById(`${items}`).innerHTML = '+'
       })
@@ -425,19 +480,23 @@ class App extends React.Component {
     const advOne = document.getElementById('item1');
     const advTwo = document.getElementById('item2');
     const advThree = document.getElementById('item3');
+    const contentArray = [];
+
+    this.state.Advantages.content.data.map((id) => {
+      contentArray.push(id.listId);
+    })
+
+    contentArray.map((id) => {
+      document.getElementById(`${id}`).classList.add('hide');
+    })
+
     if (e.target.id == 'listButton1') {
-      advTwo.classList.add('hide');
-      advThree.classList.add('hide');
       advOne.classList.remove('hide');
       advOne.classList.add('show');
     } else if (e.target.id == 'listButton2') {
-      advThree.classList.add('hide');
-      advOne.classList.add('hide');
       advTwo.classList.remove('hide');
       advTwo.classList.add('show');
     } else if (e.target.id == 'listButton3') {
-      advOne.classList.add('hide');
-      advTwo.classList.add('hide');
       advThree.classList.remove('hide');
       advThree.classList.add('show');
     }
@@ -462,7 +521,10 @@ class App extends React.Component {
         <AboutSection whyus = {this.state.WhyUsList} onClick = {this.whyUsOnClick} services = {this.state.Services} advantages = {this.state.Advantages} advantagesOnClick = {this.advantagesOnClick}/>
         <AttorneysSection data = {this.state.Attorneys}/>
         <ConsultationSection data = {this.state.consultationForm} />
-        <RecentPostSection data = {this.state.posts}/>
+        <RecentPostSection data = {this.state.posts} sponsorList = {this.state.sponsorList}/>
+        <ContactSection data= {this.state.contact}/>
+        <WriteUsSection data = {this.state.writeUs}/>
+
       </main>
     )
   }

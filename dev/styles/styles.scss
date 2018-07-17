@@ -12,6 +12,8 @@
 @import 'components/attorneys-section';
 @import 'components/consultation-section';
 @import 'components/posts-section';
+@import 'components/contact-section';
+@import 'components/writeus-section';
 
 html {
     font-size: 62.5%;
@@ -33,5 +35,5 @@ a {
 .wrapper {
     width: 1080px;
     margin: 0 auto;
-    padding: 40px;
+    padding: 30px;
 }

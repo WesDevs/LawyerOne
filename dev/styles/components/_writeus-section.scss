@@ -1,0 +1,76 @@
+.writeus-section {
+    background: linear-gradient( rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+    url(../assets/map.png);
+    padding: 30px 0;
+    .wrapper {
+        display: flex;
+        flex-direction: Column;
+        justify-content: center;
+        align-items: center;
+
+        h1,
+        h3 {
+            font-family: $play;
+            margin-top: 0;
+        }
+
+        h1 {
+            font-size: 4rem;
+
+        }
+
+        h3 {
+            font-size: 2.5rem;
+            color: grey;
+        }
+
+        form {
+            .inputs {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                justify-content: space-between;
+
+
+                div {
+                    width: calc(50% - 10px);
+                    input {
+                        width: 100%;
+                        padding: 5px;
+                        height: 45px;
+                        margin-bottom: 20px;
+                    }
+                    input,
+                    textarea {
+                        border: 2px solid $blue;
+                        font-family: $play;
+                        padding: 10px;
+                        font-size: 2rem;
+
+                    }
+                }
+
+                & div:last-child {
+                    width: 100%;
+                    textarea {
+                        width: 100%;
+                        resize: none;
+                        height: 150px;
+                    }
+                }                
+
+            }
+
+            input[type=submit] {
+                padding: 15px 30px;
+                width: 150px;
+                display: block;
+                margin: 20px auto;
+                background: transparent;
+                border: 2px solid $blue;
+                font-size: 2rem;
+                font-family: $play;
+            }
+        }
+    }
+}
