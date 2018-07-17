@@ -11,6 +11,7 @@ import ProcessSection from './Components/ProcessSection/ProcessSection';
 import AboutSection from './Components/AboutSection/AboutSection';
 import AttorneysSection from './Components/AttorneysSection/AttorneysSection';
 import ConsultationSection from './Components/ConsultationSection/ConsultationSection';
+import RecentPostSection from './Components/RecentPostSection/RecentPostSection';
 
 
 class App extends React.Component {
@@ -361,7 +362,27 @@ class App extends React.Component {
           ]
           },
         ],
-      }
+      },
+      consultationForm: {
+        fullName: true,
+        email: true,
+        phone: true,
+        text: true,
+      },
+      posts: [
+        {
+          src: 'public/assets/lawyer1.jpg',
+          date: "January 06'15",
+          name: 'Jen Anderson',
+          title: 'Ut wisi enim ad minim veniam'
+        },
+        {
+          src: 'public/assets/lawyer2.jpg',
+          date: "January 06'15",
+          name: 'Jun Anderson',
+          title: 'Ut wisi enim ad minim veniam'
+        },
+      ]
     };
 
     this.whyUsOnClick = this.whyUsOnClick.bind(this);
@@ -440,7 +461,8 @@ class App extends React.Component {
         <ProcessSection data = {this.state.Process}/>
         <AboutSection whyus = {this.state.WhyUsList} onClick = {this.whyUsOnClick} services = {this.state.Services} advantages = {this.state.Advantages} advantagesOnClick = {this.advantagesOnClick}/>
         <AttorneysSection data = {this.state.Attorneys}/>
-        <ConsultationSection />
+        <ConsultationSection data = {this.state.consultationForm} />
+        <RecentPostSection data = {this.state.posts}/>
       </main>
     )
   }
