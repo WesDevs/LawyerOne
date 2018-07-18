@@ -27,6 +27,10 @@ class Menu extends React.Component {
                         listClass = {items.listClass}
                         socials = {items.socials}
                         onClick = {this.props.onClick}
+                        form = {items.form}
+                        inputId = {items.inputId}
+                        submit = {items.submit}
+                        tweet = {items.tweet}
                         /> 
                     })
                 }

@@ -14,7 +14,7 @@ import ConsultationSection from './Components/ConsultationSection/ConsultationSe
 import RecentPostSection from './Components/RecentPostSection/RecentPostSection';
 import ContactSection from './Components/ContactSection/ContactSection';
 import WriteUsSection from './Components/WriteUsSection/WriteUsSection';
-
+import FooterSection from './Components/FooterSection/FooterSection';
 
 class App extends React.Component {
   constructor() {
@@ -47,19 +47,24 @@ class App extends React.Component {
         data : [
           {
             h3: '900+',
-            p: 'Happy Clients',
+            h4: 'Happy Clients',
+            p: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quae non ad alias veniam corporis beatae nisi ex praesentium molestias!',
+            
           },
           {
             h3: '95%',
-            p: 'Cases Success',
+            h4: 'Case Success',
+            p: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quae non ad alias veniam corporis beatae nisi ex praesentium molestias!',
           },
           {
             h3: '$250k+',
-            p: 'Recovered',
+            h4: 'Recovered',
+            p: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quae non ad alias veniam corporis beatae nisi ex praesentium molestias!',
           },
           {
             h3: '500+',
-            p: 'Cases Done',
+            h4: 'Cases Done',
+            p: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quae non ad alias veniam corporis beatae nisi ex praesentium molestias!',
           },
         ],
         style: 'banner-stats',
@@ -439,6 +444,43 @@ class App extends React.Component {
         title: 'Write to Us',
         subheading: 'Contact Us via Contact Form'
       },
+      footer: {
+        data: [
+          {
+            h1: 'Law Practice',
+            p: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt assumenda asperiores modi quo quod dolore, aut alias similique, voluptas, accusamus culpa! Debitis sequi repellat error. Perspiciatis est, illum veniam qui.',
+            a: 'Purchase',
+            href: '#'
+          },
+          {
+            h1: 'Subscribe',
+            form: true, 
+            inputId: 'subtscribeInput',
+            placeholder: 'Your Email',
+            submit: '+',
+            p: 'Subscribe to Our Newsletter to be updated. We promise not to spam You!',
+          },
+          {
+            h1: 'Latest Tweets',
+            tweet: [
+              {
+                text: 'Our interview with #Disney lead designer Ryan Terry has just been published ',
+                href: 'http://enva.to.n-QkkH',
+                ahref: '#',
+                tweetName: 'Envato',
+                tweetDate: '2 Days Ago'
+              },
+              {
+                text: "The Web's Grain - A view on designing for the web by Frank Chimero",
+                href: 'http://enva.to/GnJEy',
+                ahref: '#',
+                tweetName: 'Envato',
+                tweetDate: '5 Days Ago'
+              }
+            ]
+          },
+        ],
+      }
     };
 
     this.whyUsOnClick = this.whyUsOnClick.bind(this);
@@ -524,7 +566,7 @@ class App extends React.Component {
         <RecentPostSection data = {this.state.posts} sponsorList = {this.state.sponsorList}/>
         <ContactSection data= {this.state.contact}/>
         <WriteUsSection data = {this.state.writeUs}/>
-
+        <FooterSection data = {this.state.footer}/>
       </main>
     )
   }

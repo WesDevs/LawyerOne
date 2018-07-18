@@ -7,7 +7,7 @@ const MenuItem = (props) => {
 
             {props.button ? <button id={props.buttonId} onClick = {props.onClick}>{props.button}</button> : ''}
 
-            {props.image ? < img src = {props.image}/> : ''}
+            {props.image ? <img src = {props.image}/> : ''}
 
             {props.icon ? <i className = {props.icon}></i> : ''}
 
@@ -23,13 +23,31 @@ const MenuItem = (props) => {
 
             {props.h6 ? <h6>{props.h6}</h6> : ''}
 
+            {props.form ? <form>
+                <label htmlFor = {props.inputId} className = "visuallyhidden"></label>
+                <input type = 'email' id={props.inputId} placeholder={props.placeholder}/> 
+                <input type = 'submit' value = {props.submit}/>
+                </form> :''}
+
             {props.p ? <p>{props.p}</p> : ''}
 
             {props.a ? <a href={props.href}>{props.a}</a> : ''}
 
             {props.socials ? <SocialNav socialMedias = {props.socials} /> : ''}
             
-
+            {props.tweet ? <ul className = 'tweet-container'>
+                {props.tweet ? props.tweet.map((items, i) => {
+                    return <li key = {i}>
+                            <p>{items.text} <a href={items.ahref} >{items.href}</a></p>
+                                <div>
+                                    <i className = "fab fa-twitter"></i>
+                                    <p>{items.tweetName}</p>
+                                    <p>{items.tweetDate}</p>
+                                </div>
+                            </li>; 
+                }) : '' }
+            </ul> : ''}
+           
         </li>
     )
 }
