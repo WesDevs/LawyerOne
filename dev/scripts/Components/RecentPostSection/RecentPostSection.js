@@ -5,7 +5,6 @@ import Menu from '../menus/menu'
 class RecentPostSection extends React.Component {
 
     render() {
-        console.log(this.props)
         return (
             <section className = "recent-post-section">
                 <div className = "wrapper">

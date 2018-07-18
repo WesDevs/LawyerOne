@@ -1,6 +1,5 @@
 import React from 'react';
 const Posts = (props) => {
-    console.log(props)
     return ( 
         <li className = "posts"> 
             <a href = {props.url}>

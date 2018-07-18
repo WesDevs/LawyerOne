@@ -1,41 +1,39 @@
 import React from 'react';
 
-class Form extends React.Component {
-
-    render() {
+const Form = (props) => {
         return (
             <form action="#">
                 <div className="inputs">
                 {
-                    this.props.fullName ?                 
+                    props.formData.fullName ?                 
                     <div>
                         <label htmlFor="fullNameInput" className="visuallyhidden"></label>
                         <input type="text" id="fullNameInput" placeholder="Full Name" required/>
                     </div> : ''
                 }
                 {
-                    this.props.email ? 
+                    props.formData.email ? 
                     <div>
                         <label htmlFor="emailInput" className="visuallyhidden"></label>
                         <input type="email" id="emailInput" placeholder = "Email" required/>
                     </div> : ''
                 }
                 {
-                    this.props.phone ? 
+                    props.formData.phone ? 
                     <div>
                         <label htmlFor="phoneInput" className="visuallyhidden"></label>
                         <input type="tel" id="phoneInput" placeholder ="Phone Number" required/>
                     </div> : ''
                 }
                 {
-                    this.props.subject ? 
+                    props.formData.subject ? 
                     <div>
                         <label htmlFor="subjectInput" className="visuallyhidden"></label>
                         <input type="text" id="subjectInput" required placeholder = "Subject"/>
                     </div> : ''
                 }
                 {
-                    this.props.text ? 
+                    props.formData.text ? 
                     <div>
                         <label htmlFor="textInput" className="visuallyhidden"></label>
                         <textarea id="textInput" placeholder ="Message...."></textarea>
@@ -47,6 +45,6 @@ class Form extends React.Component {
             </form>
         )
     }
-}
+    
 
 export default Form;

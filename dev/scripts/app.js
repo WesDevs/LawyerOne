@@ -4,17 +4,10 @@ import TopNav from './Components/Header/TopNav';
 import HeroText from './Components/Header/HeroText';
 import Menu from './Components/menus/menu';
 import QuoteSection from './Components/QuoteSection/QuoteSection';
-import LawSection from './Components/LawsSection/LawSection';
-import ImageGallery from './Components/ImageGallerySection/ImageGallery';
 import PracticeSection from './Components/PracticesSection/PracticeSection';
-import ProcessSection from './Components/ProcessSection/ProcessSection';
 import AboutSection from './Components/AboutSection/AboutSection';
-import AttorneysSection from './Components/AttorneysSection/AttorneysSection';
-import ConsultationSection from './Components/ConsultationSection/ConsultationSection';
 import RecentPostSection from './Components/RecentPostSection/RecentPostSection';
-import ContactSection from './Components/ContactSection/ContactSection';
-import WriteUsSection from './Components/WriteUsSection/WriteUsSection';
-import FooterSection from './Components/FooterSection/FooterSection';
+import Section from './Components/Section/Section'
 
 class App extends React.Component {
   constructor() {
@@ -70,6 +63,7 @@ class App extends React.Component {
         style: 'banner-stats',
       },
       laws: {
+        sectionClass: 'laws-section',
         data: [
           {
             icon: 'fas fa-gavel',
@@ -89,6 +83,7 @@ class App extends React.Component {
         ]
       },
       imgGallery: {
+        sectionClass: 'image-gallery',
         data:[
         {
           image:'public/assets/photo-1e.jpg',
@@ -155,6 +150,7 @@ class App extends React.Component {
         ]
       },
       Process: {
+        sectionClass: 'process-section',
         data: [
           {
             h2: 'Request Quote',
@@ -285,7 +281,8 @@ class App extends React.Component {
         }
       },
       Attorneys: {
-        title: 'Our Attorneys',
+        sectionClass: 'attorneys-section',
+        h1: 'Our Attorneys',
         h3: 'Meet Our Talented Team',
         data: [
           {
@@ -371,12 +368,16 @@ class App extends React.Component {
         ],
       },
       consultationForm: {
-        fullName: true,
-        email: true,
-        phone: true,
-        text: true,
-        titleColored: 'Get ',
-        title: 'Free Consultation!'
+        sectionClass: 'consultation-section',
+        span: 'Get ',
+        h1: 'Free Consultation!',
+        form: {
+          fullName: true,
+          email: true,
+          phone: true,
+          text: true,
+        }
+
       },
       posts: [
         {
@@ -419,6 +420,7 @@ class App extends React.Component {
           style: 'sponsor-list'
       },
       contact: {
+        sectionClass: 'contact-section',
         data: [
           {
             image: 'public/assets/phone.png',
@@ -436,15 +438,22 @@ class App extends React.Component {
         ]
       },
       writeUs: {
-        fullName: true,
-        email: true,
-        phone: true,
-        text: true,
-        subject: true,
-        title: 'Write to Us',
-        subheading: 'Contact Us via Contact Form'
+        sectionClass: 'writeus-section',
+        h1: 'Write to Us',
+        h3: 'Contact Us via Contact Form',
+        form: {
+          fullName: true,
+          email: true,
+          phone: true,
+          text: true,
+          subject: true,
+          title: 'Write to Us',
+          subheading: 'Contact Us via Contact Form'
+        }
+ 
       },
       footer: {
+        sectionClass: 'footer-section',
         data: [
           {
             h1: 'Law Practice',
@@ -556,17 +565,17 @@ class App extends React.Component {
           <Menu data = {this.state.statList} />
         </header>
         <QuoteSection />
-        <LawSection data = {this.state.laws} />
-        <ImageGallery data = {this.state.imgGallery}/>
+        <Section data = {this.state.laws} />
+        <Section data = {this.state.imgGallery}/>
         <PracticeSection aside = {this.state.PracticesAside} main = {this.state.PracticesMain} />
-        <ProcessSection data = {this.state.Process}/>
+        <Section data = {this.state.Process}/>
         <AboutSection whyus = {this.state.WhyUsList} onClick = {this.whyUsOnClick} services = {this.state.Services} advantages = {this.state.Advantages} advantagesOnClick = {this.advantagesOnClick}/>
-        <AttorneysSection data = {this.state.Attorneys}/>
-        <ConsultationSection data = {this.state.consultationForm} />
+        <Section data = {this.state.Attorneys}/>  
+        <Section data = {this.state.consultationForm} />
         <RecentPostSection data = {this.state.posts} sponsorList = {this.state.sponsorList}/>
-        <ContactSection data= {this.state.contact}/>
-        <WriteUsSection data = {this.state.writeUs}/>
-        <FooterSection data = {this.state.footer}/>
+        <Section data = {this.state.contact}/>
+        <Section data = {this.state.writeUs}/>
+        <Section data = {this.state.footer}/>
       </main>
     )
   }

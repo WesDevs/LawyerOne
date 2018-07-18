@@ -1,8 +1,14 @@
 .process-section {
     background: url(../assets/william-stitt-196804-unsplash.jpg) no-repeat;
-    background-position: fixed;
+    background-position: center;
     background-size: cover;
+    background-attachment: fixed;
     padding: 40px 0;
+
+    .wrapper {
+        margin: 0;
+        width: 100%;
+    }
 
     ul {
         display: flex;
