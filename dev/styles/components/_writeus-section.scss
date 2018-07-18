@@ -46,7 +46,7 @@
                         font-family: $play;
                         padding: 10px;
                         font-size: 2rem;
-
+                        border-radius: 5px;
                     }
                 }
 
@@ -58,7 +58,6 @@
                         height: 150px;
                     }
                 }                
-
             }
 
             input[type=submit] {
@@ -70,6 +69,7 @@
                 border: 2px solid $blue;
                 font-size: 2rem;
                 font-family: $play;
+                border-radius: 5px;
             }
         }
     }

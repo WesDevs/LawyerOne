@@ -6,7 +6,7 @@ class SearchForm extends React.Component {
         return (
             <form action="#">
                 <label htmlFor="searchInput" className="visuallyhidden"></label>
-                <input type="text" id="searchInput" placeholder="search"/>
+                <input type="text" id="searchInput" placeholder="Search..."/>
                 <label htmlFor="searchButton" className="visuallyhidden"></label>
                 <button id="searchButton"><i className="fas fa-search"></i></button>
             </form>
