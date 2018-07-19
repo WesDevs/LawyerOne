@@ -1,12 +1,12 @@
 import React from 'react';
 
-const QuoteSection = () => {
+const QuoteSection = (props) => {
     return ( 
         <section className= "quote-section">
             < div className= "wrapper ">
-                <h1>We are <span>Passionate About Helping</span> Clients Achieve Their Goals</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus molestiae amet, praesentium eveniet deleniti quas dicta, nesciunt aliquam, quo at ad culpa iure fugit est possimus cum non numquam laudantium!</p>
-                <p>- Jason Willis, Judge -</p>
+                <h1>{props.data.h1a}<span>{props.data.span}</span> {props.data.h1b}</h1>
+                <p>{props.data.p1}</p>
+                <p>{props.data.p2}</p>
             </div>
         </section>
     )

@@ -62,6 +62,13 @@ class App extends React.Component {
         ],
         style: 'banner-stats',
       },
+      quoteSection: {
+        h1a: 'We are ',
+        span: 'Passionate About Helping',
+        h1b: 'Clients Achieve Their Goals',
+        p1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus molestiae amet, praesentium eveniet deleniti quas dicta, nesciunt aliquam, quo at ad culpa iure fugit est possimus cum non numquam laudantium!',
+        p2: '- Jason Willis, Judge -'
+      },
       laws: {
         sectionClass: 'laws-section',
         data: [
@@ -105,24 +112,31 @@ class App extends React.Component {
       PracticesAside: {
         data: [
           {
+            image: 'public/assets/wallet.png',
             h3: 'Money Laundering'
           },
           {
+            image: 'public/assets/hold.png',
             h3: 'Sexual Offences'
           },
           {
+            image: 'public/assets/diamond.png',
             h3: 'Insurance Services'
           },
           {
+            image: 'public/assets/flask.png',
             h3: 'Drug Offences'
           },
           {
+            image: 'public/assets/beer.png',
             h3: 'Drinking & Driving'
           },
           {
+            image: 'public/assets/criminal.png',
             h3: 'Shoplifting'
           },
           {
+            image: 'public/assets/fire.png',
             h3: 'Fire Accident'
           },
         ]
@@ -130,21 +144,27 @@ class App extends React.Component {
       PracticesMain: {
         data: [
           {
+            image: 'public/assets/maps-and-flags.png',
             p: 'Ut wisi enim ad minim veniam',
           },
           {
+            image: 'public/assets/maps-and-flags.png',
             p: 'Duis autem vel eum iriure dolor',
           },
           {
+            image: 'public/assets/maps-and-flags.png',
             p: 'Quis nostrud exerci ton ullamcorper suscipit',
           },
           {
+            image: 'public/assets/maps-and-flags.png',
             p: 'Hendrerit in vulputate velit esse molestie',
           },
           {
+            image: 'public/assets/maps-and-flags.png',
             p: 'Lobortis nisl aliquip ex ea commodo',
           },
           {
+            image: 'public/assets/maps-and-flags.png',
             p: 'Consequat vel illum dolore eu feugiat',
           },
         ]
@@ -222,18 +242,23 @@ class App extends React.Component {
       Services: {
         data: [
         {
+          image: 'public/assets/medal.png',
           p: 'At vero eos et accusam',
         },
         {
+          image: 'public/assets/medal.png',
           p: 'Stet clita kasd gubergren no sea',
         },
         {
+          image: 'public/assets/medal.png',
           p: 'Takimata sanctus',
         },
         {
+          image: 'public/assets/medal.png',
           p: 'Lorem ipsum dolor sit amet',
         },
         {
+          image: 'public/assets/medal.png',
           p: 'Consetetur sadipscing',
         },
         ]
@@ -489,6 +514,11 @@ class App extends React.Component {
             ]
           },
         ],
+      },
+      endnote: {
+        sectionClass: 'endnote',
+        h3: 'Made by Wesley Ho',
+        p: '© Justice 2015 | Icons made by Freepik from www.flaticon.com is licensed by CC 3.0 BY | Images by Tamarcus Brown/Giammarco Boscaro/William Stitt from www.unsplash.com'
       }
     };
 
@@ -564,7 +594,7 @@ class App extends React.Component {
           <HeroText />
           <Menu data = {this.state.statList} />
         </header>
-        <QuoteSection />
+        <QuoteSection data = {this.state.quoteSection}/>
         <Section data = {this.state.laws} />
         <Section data = {this.state.imgGallery}/>
         <PracticeSection aside = {this.state.PracticesAside} main = {this.state.PracticesMain} />
@@ -576,6 +606,7 @@ class App extends React.Component {
         <Section data = {this.state.contact}/>
         <Section data = {this.state.writeUs}/>
         <Section data = {this.state.footer}/>
+        <Section data = {this.state.endnote}/>
       </main>
     )
   }

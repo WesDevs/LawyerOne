@@ -62,6 +62,7 @@
 
         img {
             width: 60px;
+            height: 60px;
         }
 
         p {
@@ -71,9 +72,28 @@
 }
 
 .services-section {
-    p {
-        font-size: 1.2rem;
+    div {
+        p {
+            font-size: 1.4rem;
+        }
+        & > p {
+            padding-bottom: 15px;
+        }
+        ul {
+            margin: 10px 0;
+            li {
+                margin: 4px 0;
+                display: flex;
+                align-items: center;
+                img {
+                    margin-right: 5px;
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+        }
     }
+
 }
 
 .advantages-section {

@@ -3,10 +3,10 @@
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    padding: 40px 0;
 
     .wrapper {
         margin: 0;
+        padding: 0;
         width: 100%;
     }
 
@@ -15,11 +15,49 @@
         justify-content: space-around;
         align-items: center;
 
+        & li:first-child {
+        background: rgba(11, 12, 13, 0.63);
+        }
+        & li:first-child p::before {
+            content:"";
+            width: 0;
+            height: 0;
+            border-top: 30px solid transparent;
+            border-bottom: 30px solid transparent;
+            border-left: 30px solid rgba(11, 12, 13, 0.35);
+            position: absolute;
+            right: -30px;
+            top: calc(50% - 25px);
+        }
+
+        & li:nth-child(2) {
+            background-color: rgba(11, 12, 13, 0.42);
+        } 
+
+        & li:nth-child(2) p::before {
+            content:"";
+            width: 0;
+            height: 0;
+            border-top: 30px solid transparent;
+            border-bottom: 30px solid transparent;
+            border-left: 30px solid rgba(11, 12, 13, 0.3);
+            position: absolute;
+            right: -30px;
+            top: calc(50% - 25px);
+        }
+
+        & li:last-child {
+	        background-color: rgba(11, 12, 13, 0.2);
+        }
+
         li {
             display: flex;
             justify-content: center;
             flex-direction: column;
             padding: 40px 40px;
+            width: 33.33%;
+            position: relative;
+            height: 350px;
 
             h2 {
                 font-size: 3.5rem;

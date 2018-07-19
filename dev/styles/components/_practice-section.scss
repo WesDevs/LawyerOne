@@ -25,10 +25,25 @@
         ul {
             display: flex;
             flex-wrap: wrap;
+            margin: 0 auto;
+            justify-content: center;
 
             li {
-                width: 50%;
+                list-style-position: inside;
                 font-size: 1.6rem;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                width: 40%;
+                img {
+                    width: 15px;
+                    height: 15px;
+                    margin: 0;
+                    padding: 0;
+                }
+                p {
+                    padding-left: 10px;
+                }
             }
         }
     }
@@ -39,5 +54,35 @@
         font-family: $crim;
         font-size: 1.5rem; 
         margin-right: 40px;
+
+        & > h3 {
+            font-size: 4rem;
+            margin: 20px 0;
+        }
+
+        ul {
+            li {
+                border-top: 1px lightgrey solid;
+                display: flex;
+                align-items: center;
+                &:hover {
+                    background: rgb(241, 241, 241);
+                }
+                &:hover h3 {
+                    color: $blue;              
+                }
+                img {
+                    margin: 0;
+                    padding: 0;
+                }
+                h3 {
+                    margin: 10px;
+                    color: grey;
+                }
+            }
+            & li:last-child {
+                border-bottom: 1px lightgrey solid;
+            }
+        }
     }
 }

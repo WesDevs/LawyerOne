@@ -1,0 +1,86 @@
+.footer-section {
+    background: #414148;
+    color: white;
+    .wrapper {
+        padding: 50px;
+        width: 100%;
+        ul {
+            display: flex;
+            justify-content: space-between;
+
+            li {
+                width: 30%;
+                &:first-child > a {
+                    color: gold;
+                    border: 2px solid gold;
+                    border-radius: 5px;
+                    padding: 10px 20px;
+                    font-size: 1.5rem;
+                    font-family: $play;
+                    font-weight: 700;
+                }
+                h1 {
+                    font-family: $play;
+                    font-size: 4rem;
+                    margin-top: 0;
+                }
+                p {
+                    font-family: $play;
+                    font-size: 1.4rem;
+                }
+                & > ul {
+                    flex-direction: column;
+                    li {
+                        width: 100%;
+                    }
+                }
+
+
+                form {
+                    display: flex;
+                    align-items: center;
+                    &:hover input {
+                        border-bottom: 2px solid red;    
+                    }
+                    input {
+                        width: 70%;
+                        border: none;
+                        height: 45px;
+                        margin-bottom: 10px;
+                        border-bottom: 2px transparent solid;
+                    }
+                    input[type=submit] {
+                        width: 15%;
+                        font-size: 2rem;
+                        background: $blue;
+                        color: white;
+                        &:hover {
+                            background:gold;
+                            color: black;
+                        }
+                    }
+                }
+                div {
+                    display: flex;
+                    align-items: center;
+                    p {
+                        padding: 0 5px;
+                    }
+                    p:last-child {
+                        color: lightgrey;
+                    }
+                    svg {
+                        font-size: 1.4rem;
+                        color: gold;
+                    }
+                }
+                a {
+                    color: gold;
+                }
+            }
+        }
+        ul:first-child > li:first-child>p {
+            margin-bottom: 30px;
+        }
+    }
+}
