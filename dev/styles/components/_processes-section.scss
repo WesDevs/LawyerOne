@@ -88,6 +88,11 @@
                 padding: 10px 20px;
                 width: 170px;
                 text-align: center;
+                &:hover,
+                &:active {
+                    background: gold;
+                    color: black;
+                }
             }
         }
     }

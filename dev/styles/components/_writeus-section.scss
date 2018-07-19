@@ -39,6 +39,7 @@
                         padding: 5px;
                         height: 45px;
                         margin-bottom: 20px;
+
                     }
                     input,
                     textarea {
@@ -47,6 +48,10 @@
                         padding: 10px;
                         font-size: 2rem;
                         border-radius: 5px;
+                        &:hover,
+                        &:focus {
+                            border-bottom: 2px solid gold;
+                        }
                     }
                 }
 
@@ -70,6 +75,10 @@
                 font-size: 2rem;
                 font-family: $play;
                 border-radius: 5px;
+                &:hover {
+                    background: gold;
+                    color: white;
+                }
             }
         }
     }

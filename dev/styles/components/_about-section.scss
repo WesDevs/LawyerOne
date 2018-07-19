@@ -49,7 +49,12 @@
             width: 40px;
             color: white;
             font-size: 3rem;
-            font-weight: bold;
+            font-weight: 700;
+            &:hover,
+            &:active {
+                color: #222;
+                background: Gold;
+            }
         }
     }
 

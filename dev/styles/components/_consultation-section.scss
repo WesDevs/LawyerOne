@@ -19,12 +19,18 @@
         text-align: center;
         input,
         textarea {
+            border: none;
             width: 80%;
             resize: none;
             font-family: $crim;
             font-size: 2rem;
             padding: 10px;
             margin: 2px 0;
+            border-bottom: 5px solid transparent;
+            &:focus,
+            &:hover {
+                border-bottom: 5px gold solid;
+            }
         }
         input {
             height: 50px;

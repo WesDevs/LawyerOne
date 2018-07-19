@@ -5,7 +5,7 @@
     
     li {
         font-family: $crim; 
-        font-size: 1.4rem;
+        font-size: 1.6rem;
     }
     
     h2 {
@@ -17,19 +17,40 @@
         display: flex;
         flex: 1 1 auto;
         justify-content: center;
+        align-items: center;
 
         li {
-            margin: 0 3%;
+            padding: 0 2%;
             text-transform: uppercase;
+            font-size: 1.6rem;
+            height: 60px;
+            a {
+                line-height: 60px;
+            }
+            &:hover {
+                color: $blue;
+                background: lightgrey;
+            }
         }
     }
     .social-nav-list {
-        flex: 0.5 0.5 auto;
+        flex: 0.5 1 auto;
         justify-content: center;
         display: flex;
 
         li {
-            margin: 0 3%;
+            font-size: 1.5rem;
+            a {
+                width: 35px;
+                height: 20px;
+                svg {
+                    width: 35px;
+                    height: 20px;
+                }
+            }
+            :hover {
+                color: gold;
+            }
         }
     }
 
