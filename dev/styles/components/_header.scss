@@ -87,7 +87,7 @@ header {
             height: 150px;
             transition: all 0.5s ease;
             &:hover p {
-                visibility: visible;
+                display: block
             }
             &:hover {
                 height: 230px;
@@ -107,7 +107,7 @@ header {
             }
             p {
                 margin-bottom: 20px;
-                visibility: hidden;
+                display: none;
             }
             h4 {
                 padding-bottom: 10px;
@@ -125,5 +125,148 @@ header {
     to {
         top: 20%;
         opacity: 1;
+    }
+}
+
+@media (max-width: 1051px) {
+    @keyframes slideIn {
+        from {
+            top: 40%;
+            opacity: 0;
+        }
+        to {
+            top: 15%;
+            opacity: 1;
+        }
+    }
+
+    header {
+        background: url('../assets/tamarcus-brown-266128-unsplash1-900.jpg') no-repeat;
+        background-size: 100% auto;
+        background-position: 10% 10%;
+    
+        .hero-text {
+            top: 15%;
+            left: 10%;
+            h1 {
+                font-size: 3.5rem;
+            }
+            h3 {
+                font-size: 3rem;
+            }
+            p {
+                font-size:1.5rem;
+            }
+            a{
+                font-size: 1.5rem;
+
+            }
+        }
+
+        .banner-stats {
+            li {
+                padding: 10px;
+                height: 120px;
+                h3 {
+                    font-size: 2.5rem;
+                }
+
+                h4 {
+                    font-size: 2rem;
+                }
+
+                p {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+@keyframes slideIn {
+    from {
+        top: 40%;
+        opacity: 0;
+    }
+    to {
+        top: 20%;
+        opacity: 1;
+    }
+}
+    header {
+        .hero-text {
+            width: 50%;
+            top: 20%;
+            h1 {
+                font-size: 2.5rem;
+            } 
+            h3 {
+                font-size: 1.5rem;
+            }
+            p {
+                font-size: 1.2rem;
+                font-weight: Bold;
+            }
+        }
+
+        .banner-stats {
+            li {
+                height: 100px;
+                h3 {
+                    font-size: 1.7rem;
+                }
+                h4,
+                p {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 401px) {
+    header {
+        background: url('../assets/tamarcus-brown-266128-unsplash1-900-mobile.jpg') no-repeat;
+        background-size: 100% auto;
+        background-position: 10% 10%;
+
+        .hero-text {
+            width: 60%;
+        }
+
+        .banner-stats {
+            // flex-direction: column;
+            li {
+                h3 {
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-height: 650px) {
+    header {
+        .banner-stats {
+            li {
+                height: 100px;
+                h3 {
+                    font-size: 2rem;
+                }
+                h4,
+                p {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-height:550px) and (min-width: 800px) {
+    header {
+        .banner-stats {
+            display: none;
+        }
     }
 }

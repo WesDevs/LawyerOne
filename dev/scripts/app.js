@@ -75,17 +75,20 @@ class App extends React.Component {
           {
             icon: 'fas fa-gavel',
             h3: 'Civil Law',
-            p: 'Tempor invidunt ut labore dolore magna aliquyam.'
+            p: 'Tempor invidunt ut labore dolore magna aliquyam.',
+            a: 'Know More'
           },
           {
             icon: 'fas fa-balance-scale',
             h3: 'Criminal Law',
-            p: 'Tempor invidunt ut labore dolore magna aliquyam.'
+            p: 'Tempor invidunt ut labore dolore magna aliquyam.',
+            a: 'Know More'
           },
           {
             icon: 'fas fa-suitcase',
             h3: 'Business Law',
-            p: 'Tempor invidunt ut labore dolore magna aliquyam.'
+            p: 'Tempor invidunt ut labore dolore magna aliquyam.',
+            a: 'Know More'
           },
         ]
       },

@@ -86,3 +86,83 @@
         }
     }
 }
+
+@media (max-width: 1105px) {
+    .practice-section {
+        .practice-main {
+            width: calc(70% - 20px);
+            img {
+                width: 60%;
+            }
+            h4 {
+                font-size: 1.5rem;
+            }
+            ul li {
+                p {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+        .practice-aside {
+            width: calc(30% - 20px);
+            & > h3 {
+                font-size: 2rem;
+            }
+            ul li {
+                h3 {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 795px) {
+    .practice-section {
+        .practice-main {
+            ul {
+                flex-direction: column;
+                li {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 675px) {
+    .practice-section {
+        .practice-main {
+            h4 {
+                font-size: 1.2rem;
+            }
+            ul li p {
+                font-size: 1rem;
+            }
+        }
+        .practice-aside {
+            & > h3 {
+                font-size: 1.5rem;
+            }
+            ul li {
+                h3 {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 510px) {
+    .practice-section div {
+        flex-direction : column;
+        .practice-aside {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .practice-main {
+            width: 100%;
+        }
+    }
+}

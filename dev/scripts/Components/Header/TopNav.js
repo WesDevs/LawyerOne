@@ -10,9 +10,12 @@ class TopNav extends React.Component {
             <div className="top-nav">
                 <img src="public/assets/logo.png" alt="Site Logo"/>
                 <h2>Law Practice</h2>
-                <NavBar menuItems = {this.props.menuItems}/>
-                <SocialNav socialMedias = {this.props.socialMedias}/>
-                <SearchForm />
+                <button className = 'nav-button'><i class="fas fa-bars"></i></button>
+                <div className = "nav-container">
+                    <NavBar menuItems = {this.props.menuItems}/>
+                    <SocialNav socialMedias = {this.props.socialMedias}/>
+                    <SearchForm />
+                </div>
             </div>
         )
     }

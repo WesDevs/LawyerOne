@@ -2,7 +2,13 @@
     display: flex;
     align-items: center;
     background: white;
+    position: relative;
     
+    img {
+        height: 60px;
+        width: 60px;
+    }
+
     li {
         font-family: $crim; 
         font-size: 1.6rem;
@@ -12,6 +18,8 @@
         margin: 0 8px;
         font-family: $play;
         font-size: 2rem;
+        width: 50px;
+        display: block;
     }
     .menu {
         display: flex;
@@ -33,6 +41,32 @@
             }
         }
     }
+
+    .nav-button {
+        display: none;
+        height: 60px;
+        width: 60px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: $blue;
+        color: gold;
+        font-size: 2rem;
+        border: none;
+        &:hover,
+        &:active {
+            color: $blue;
+            background: gold;
+        }
+    }
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+    }
+
     .social-nav-list {
         flex: 0.5 1 auto;
         justify-content: center;
@@ -85,6 +119,17 @@
         input {
             border-bottom: 3px transparent solid;
             width: 1px;
+        }
+    }
+}
+
+@media (max-width: 1051px) {
+    .top-nav {
+        .nav-container {
+            display: none;
+        }
+        .nav-button {
+            display: block;
         }
     }
 }
