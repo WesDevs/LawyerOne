@@ -134,3 +134,64 @@
     }
 
 }
+
+@media (max-width: 1081px) {
+    .recent-post-section {
+        .posts-list {
+            .posts {
+                .posts-title {
+                    font-size: 1.6rem;
+                    span {
+                        top: 0;    
+                    }
+                }
+
+                .profile-info {
+                    img {
+                        width :40px;
+                        height :40px;
+                    }
+                    p {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .recent-post-section {
+        .wrapper {
+            h1 {
+                font-size: 2.5rem;
+            }
+            a {
+                font-size: 1.5rem;
+            }
+        }
+        .posts-list {
+            flex-direction: column;
+            align-items: center;
+            .posts {
+                margin-bottom: 10px;
+                width: 60%;
+            }
+        }
+        .button-container {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 520px) {
+    .recent-post-section {
+        .wrapper {
+            .posts-list {
+                .posts {
+                    width: 250px;
+                }
+            }
+        }
+    }
+}

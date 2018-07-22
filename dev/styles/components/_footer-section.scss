@@ -85,3 +85,52 @@
         }
     }
 }
+
+@media (max-width: 900px) {
+    .footer-section {
+        .wrapper {
+            ul {
+                li {
+                    h1 {
+                        font-size: 2rem;
+                    }
+                    p {
+                        font-sizE: 1.2rem;
+                    }
+                    form {
+                        input {
+                            height: 30px;
+                        }
+                    }
+                }
+                li:first-child > a {
+                    font-size: 1.2rem;
+                    padding: 5px 10px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 621px) {
+    .footer-section {
+        .wrapper {
+            ul {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                li {
+                    width: 80%;
+                    margin: 10px 0;
+                    form {
+                        width: 100%;
+                        justify-content: center;
+                    }
+                    div {
+                        justify-content: center;
+                    }
+                }     
+            }
+        }
+    }
+}
