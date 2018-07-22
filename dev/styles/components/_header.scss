@@ -128,7 +128,7 @@ header {
     }
 }
 
-@media (max-width: 1051px) {
+@media (max-width: 1350px) {
     @keyframes slideIn {
         from {
             top: 40%;
@@ -195,6 +195,9 @@ header {
     }
 }
     header {
+            background: url('../assets/tamarcus-brown-266128-unsplash1-900-mobile.jpg') no-repeat;
+            background-size: 100% auto;
+            background-position: 10% 10%;
         .hero-text {
             width: 50%;
             top: 20%;
@@ -225,11 +228,11 @@ header {
     }
 }
 
-@media (max-width: 401px) {
+@media (max-width: 520px) {
     header {
         background: url('../assets/tamarcus-brown-266128-unsplash1-900-mobile.jpg') no-repeat;
-        background-size: 100% auto;
-        background-position: 10% 10%;
+        // background-size: 100% auto;
+        background-position: 60% 20%;
 
         .hero-text {
             width: 60%;

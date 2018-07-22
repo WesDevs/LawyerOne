@@ -107,6 +107,8 @@
     }
     ul {
         display: flex;
+        width: 100%;
+
         .advantage-buttons {
             margin: 0 auto;
             flex: 1 1 auto;
@@ -122,7 +124,7 @@
 
             button {
                 width: 100%;
-                padding: 10px 20px;
+                padding: 10px 0;
                 font-family: $play;
                 font-size: 1.6rem;
                 background: $blue;
@@ -150,4 +152,55 @@
 
 .hide {
     display: none;
+}
+
+@media (max-width: 1065px) {
+    .whyus-section {
+        div:nth-child(2) {
+            padding: 10px;
+            p {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    .about-section {
+        margin: 20px 0;
+        .wrapper {
+            display: flex;
+            flex-direction: column;     
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .services-section,
+    .whyus-section,
+    .advantages-section {
+        width: 80%;
+
+        h1 {
+            font-weight: bold;
+            font-size: 3rem;
+            margin: 20px 0 40px 0;
+        }
+    }
+    .whyus-section {
+        div:nth-child(2) {
+            text-align: center;
+            p {
+                margin: 0;
+                align-self: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .services-section {
+        div p {
+            font-size: 1.2rem;
+        }
+    }
 }
