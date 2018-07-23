@@ -143,7 +143,13 @@
         position: relative;
         .menu {
             flex: 0 0 auto;
+            flex-wrap: wrap;
+            width: 50%;
             margin-bottom: 20px;
+            li {
+                width: 100px;
+                height: 40px;
+            }
         }
         .social-nav-list {
             flex: 0 0 auto;
