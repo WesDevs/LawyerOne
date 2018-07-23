@@ -1,6 +1,7 @@
 .contact-section {
     background: rgba(223, 173, 123, 0.29);
     padding-bottom: 30px;
+    height: 150px;
 
     .wrapper {
         position: relative;
@@ -35,9 +36,10 @@
 @media (max-width: 755px) {
     .contact-section {
         padding-bottom: 0;
+        height: 120px;
         .wrapper {
             ul {
-                top: -20px;
+                top: -30px;
                 width: 90%;
                 margin: 0 auto;
                 position: relative;
