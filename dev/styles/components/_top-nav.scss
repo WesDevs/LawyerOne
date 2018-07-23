@@ -65,6 +65,20 @@
         align-items: center;
         width: 100%;
 
+        .nav-exit-button {
+            height: 60px;
+            width: 60px;
+            font-size: 4rem;
+            background: transparent;
+            border: none;
+            display: block;
+            position: absolute;
+            z-index: 2;
+            right: 0;
+            top: 0;
+            display: none;
+        }
+
     }
 
     .social-nav-list {
@@ -89,6 +103,7 @@
     }
 
     form {
+        z-index: 4;
         &:hover input {
             border-bottom: 3px solid $blue;
         }
@@ -125,11 +140,39 @@
 
 @media (max-width: 1051px) {
     .top-nav {
+        position: relative;
+        .menu {
+            flex: 0 0 auto;
+            margin-bottom: 20px;
+        }
+        .social-nav-list {
+            flex: 0 0 auto;
+            margin-bottom: 20px;
+        }
+        form input {
+            width: 150px;
+        }
         .nav-container {
             display: none;
+            flex-direction: column;
+            justify-content: Center;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            z-index: 900;
+            background: white;
         }
         .nav-button {
             display: block;
+        }
+    }
+}
+
+@media (min-width: 1052px) {
+    .top-nav {
+
+        .nav-container {
+            width: 100%;
         }
     }
 }

@@ -141,7 +141,7 @@ header {
     }
 
     header {
-        background: url('../assets/tamarcus-brown-266128-unsplash1-900.jpg') no-repeat;
+        background: url('../assets/tamarcus-brown-266128-unsplash1-11.jpg') no-repeat;
         background-size: 100% auto;
         background-position: 10% 10%;
     
@@ -180,6 +180,14 @@ header {
                 }
             }
         }
+    }
+}
+
+@media (max-width: 980px) {
+    header {
+        background: url('../assets/tamarcus-brown-266128-unsplash1-900.jpg') no-repeat;
+        background-size: 100% auto;
+        background-position: 10% 10%;
     }
 }
 

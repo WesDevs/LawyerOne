@@ -527,6 +527,8 @@ class App extends React.Component {
 
     this.whyUsOnClick = this.whyUsOnClick.bind(this);
     this.advantagesOnClick = this.advantagesOnClick.bind(this);
+    this.topNavClick = this.topNavClick.bind(this);
+    this.topNavExitClick = this.topNavExitClick.bind(this);
   }
 
   whyUsOnClick(e) {
@@ -572,6 +574,7 @@ class App extends React.Component {
 
     contentArray.map((id) => {
       document.getElementById(`${id}`).classList.add('hide');
+      document.getElementById(`${id}`).style.cssText = "background: gold"
     })
 
     if (e.target.id == 'listButton1') {
@@ -586,12 +589,28 @@ class App extends React.Component {
     }
   }
 
+  topNavClick() {
+    const nav = document.getElementsByClassName('nav-container');
+    const exitButton = document.getElementsByClassName('nav-exit-button');
+    nav[0].style.cssText = "display: flex";
+    exitButton[0].style.cssText = "display: block";
+  }
+
+  topNavExitClick() {
+    const nav = document.getElementsByClassName('nav-container');
+    const button = document.getElementsByClassName('nav-button');
+    nav[0].style.cssText = "display: none";
+    button[0].style.cssText = "display: block";
+  }
+
   render() {
     return (
       <main>
         <TopNav 
           menuItems = {this.state.menuItems}
           socialMedias = {this.state.socialMedias}
+          onClick = {this.topNavClick}
+          exitClick = {this.topNavExitClick}
         />
         <header>
           <HeroText />
