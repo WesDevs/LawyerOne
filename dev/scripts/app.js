@@ -574,7 +574,6 @@ class App extends React.Component {
 
     contentArray.map((id) => {
       document.getElementById(`${id}`).classList.add('hide');
-      document.getElementById(`${id}`).style.cssText = "background: gold"
     })
 
     if (e.target.id == 'listButton1') {
