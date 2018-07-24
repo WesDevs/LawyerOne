@@ -248,6 +248,12 @@ header {
         .banner-stats {
             // flex-direction: column;
             li {
+                &:hover {
+                    height: 100px;
+                }
+                &:hover p {
+                    display: none;
+                }
                 h3 {
                     margin-top: 5px;
                 }
