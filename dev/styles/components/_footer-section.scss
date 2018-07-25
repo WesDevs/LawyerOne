@@ -18,6 +18,10 @@
                     font-size: 1.5rem;
                     font-family: $crim;
                     font-weight: 700;
+                    &:hover,
+                    &:active {
+                        background: white;
+                    }
                 }
                 h1 {
                     font-family: $play;
